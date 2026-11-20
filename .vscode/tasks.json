@@ -1,0 +1,14 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    { "label": "1. Систем асаах (npm start)", "type": "shell", "command": "npm start", "isBackground": true,
+      "problemMatcher": { "pattern": { "regexp": "^x$" }, "background": { "activatesPattern": ".", "beginsPattern": ".", "endsPattern": "localhost:" } },
+      "group": { "kind": "build", "isDefault": true } },
+    { "label": "2. Жишээ өгөгдөл шинээр оруулах (db:seed)", "type": "shell", "command": "npm run db:seed", "problemMatcher": [] },
+    { "label": "3. Тест ажиллуулах (npm test)", "type": "shell", "command": "npm test", "problemMatcher": [],
+      "options": { "env": { "DATABASE_URL": "postgres://hog:hog123@localhost:5432/hog_test" } }, "group": "test" },
+    { "label": "4. Клиент build (npm run build)", "type": "shell", "command": "npm run build", "problemMatcher": [] },
+    { "label": "5. Хөгжүүлэлтийн горим: сервер (watch)", "type": "shell", "command": "npm run dev:server", "isBackground": true, "problemMatcher": [] },
+    { "label": "6. Хөгжүүлэлтийн горим: клиент (Vite :5173)", "type": "shell", "command": "npm run dev:client", "isBackground": true, "problemMatcher": [] }
+  ]
+}

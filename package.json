@@ -1,0 +1,15 @@
+{
+  "name": "hog-tsugluulalt",
+  "private": true,
+  "description": "Дархан-Уул аймгийн хог хаягдал цуглуулах захиалга, хуваарийн веб систем",
+  "scripts": {
+    "install:all": "npm --prefix server install && npm --prefix client install",
+    "build": "npm --prefix client run build",
+    "db:init": "npm --prefix server run db:init",
+    "db:seed": "npm --prefix server run db:seed",
+    "start": "npm --prefix server start",
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "test": "npm --prefix server test"
+  }
+}

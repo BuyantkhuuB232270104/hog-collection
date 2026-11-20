@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Сервер асаах (F5)",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/server/src/index.js",
+      "cwd": "${workspaceFolder}/server",
+      "console": "integratedTerminal",
+      "serverReadyAction": { "pattern": "http://localhost:([0-9]+)", "uriFormat": "http://localhost:%s", "action": "openExternally" }
+    },
+    {
+      "name": "Тест (debug)",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/server",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["--test", "--test-concurrency=1", "tests/api.test.js"],
+      "env": { "DATABASE_URL": "postgres://hog:hog123@localhost:5432/hog_test" },
+      "console": "integratedTerminal"
+    }
+  ]
+}

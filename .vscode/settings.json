@@ -1,0 +1,19 @@
+{
+  "files.encoding": "utf8",
+  "files.eol": "\n",
+  "editor.tabSize": 2,
+  "files.exclude": { "**/node_modules": true },
+  "search.exclude": { "**/node_modules": true, "client/dist": true },
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+  "sqltools.connections": [
+    {
+      "name": "hog (localhost)",
+      "driver": "PostgreSQL",
+      "server": "localhost",
+      "port": 5432,
+      "database": "hog",
+      "username": "hog",
+      "password": "hog123"
+    }
+  ]
+}
